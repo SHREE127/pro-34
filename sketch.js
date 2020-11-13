@@ -2,6 +2,7 @@ const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
+const Mouse = Matter.mouse;
 
 var engine, world;
 
@@ -15,7 +16,7 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
 
-    let canvasMouse = mouse.create(canvas.elt);
+    let canvasMouse = Mouse.create(canvas.elt);
     canvasMouse.pixelRatio = pixelDensity();
     let options={
 
